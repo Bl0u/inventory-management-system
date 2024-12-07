@@ -44,14 +44,14 @@ public class SupplierStockManager implements StockManagement {
             product.printProductDetails();
             System.out.println("\nAdd to the stock ? Type -> Y/yes or N/No");
             String answer = scanner.nextLine() ;
-            if (answer == "Y" || answer == "Yes") storeProductINDB(product) ;
+            if (answer.equals("Y") || answer.equals("Yes")) storeProductINDB(product) ;
             else {
                 System.out.println("\n\nYou want to add another product? Type -> Y/yes or N/No");
                 String answer2 = scanner.nextLine();
-                if (answer2.toLowerCase().equals("y") || answer2.toLowerCase().equals("yes")) {
+                if (answer2.equalsIgnoreCase("y") || answer2.equalsIgnoreCase("yes")) {
                     this.addProduct(user);
                 }
-                else return;
+                // else missing
             }
     }
 

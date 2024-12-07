@@ -11,7 +11,7 @@ import Classes.Products.Product.*;
 import static Classes.enums.AdministratorInterfaceState.*;
 
 public class AdministratorInterfaceManager extends Interface implements AdministratorInterfaceManagement {
-    Adminstrator admin = new Adminstrator() ;
+
     @Override
     public void printManageOrderFunctions() {
         System.out.println("1- Manage Orders:");
