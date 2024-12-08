@@ -35,4 +35,8 @@ public class OrderReportManager implements OrderManagement {
     public void printOrder(int id) {
 
     }
+
+    public void handleOrderManagement(int orderChoice) {
+
+    }
 }

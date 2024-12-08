@@ -40,4 +40,9 @@ public class SupplierProductManager implements ProductManagement {
     public void updateProduct(int productID, Product product) {
 
     }
+
+    @Override
+    public void handleProductManagement(int productChoice) {
+
+    }
 }

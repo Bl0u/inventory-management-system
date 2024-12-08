@@ -21,6 +21,11 @@ public class SupplierManager implements UserManagement, SupplierManagement {
     }
 
     @Override
+    public void handleSupplierManagement(int supplierChoice) {
+
+    }
+
+    @Override
     public boolean addCustomer(User user) {
         return false;
     }
@@ -33,5 +38,10 @@ public class SupplierManager implements UserManagement, SupplierManagement {
     @Override
     public boolean deleteCustomer(User user) {
         return false;
+    }
+
+    @Override
+    public void handleAdministratorManagement(int userChoice) {
+
     }
 }

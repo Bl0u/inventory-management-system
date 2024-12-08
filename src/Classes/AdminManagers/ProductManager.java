@@ -43,4 +43,8 @@ public class ProductManager  implements ProductManagement {
     public void updateProduct(int productID, Product product) {
 
     }
+
+    public void handleProductManagement(int productChoice) {
+
+    }
 }

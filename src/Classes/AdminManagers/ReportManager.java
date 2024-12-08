@@ -31,4 +31,8 @@ public class ReportManager implements ReportManagement {
     public boolean reportLowStockItems() {
         return false;
     }
+
+    public void handleReportGeneration(int reportChoice) {
+
+    }
 }

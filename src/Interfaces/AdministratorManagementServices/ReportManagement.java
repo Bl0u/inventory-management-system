@@ -14,7 +14,7 @@ public interface ReportManagement {
 
     public boolean reportSales() ;
     public boolean reportLowStockItems() ;
-
+    public void handleReportGeneration(int reportChoice);
     /*
     1. Reporting Functions:
    - reportItems(int itemId): Returns all orders for this item, total sold, and total cost.

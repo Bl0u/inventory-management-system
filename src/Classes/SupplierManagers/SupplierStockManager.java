@@ -95,4 +95,9 @@ public class SupplierStockManager implements StockManagement {
     public void storeProductINDB(Product product) {
         // store this product in the DB
     }
+
+    @Override
+    public void handleStockManagement(int stockChoice) {
+
+    }
 }

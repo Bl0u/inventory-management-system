@@ -51,4 +51,9 @@ public class StockManager implements StockManagement {
     public void storeProductINDB(Product product) {
 
     }
+
+    // Method to handle stock management actions
+    public void handleStockManagement(int stockChoice) {
+
+    }
 }
