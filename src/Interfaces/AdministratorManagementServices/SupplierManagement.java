@@ -8,4 +8,5 @@ public interface SupplierManagement  {
 
     public boolean reportSupplierPerformance(Supplier supplier) ;
     public boolean reportSuppliersRelatedToThisProduct(Product product) ;
+    public void handleSupplierManagement(int supplierChoice);
 }

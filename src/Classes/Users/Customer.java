@@ -19,5 +19,8 @@ public class Customer extends User {
     public UserType getUserType() {
         return userType;
     }
-
+    public Customer(int id){}
+    public Customer(String name, String email){}
+    public Customer(int id, String name, String email){}
+    public Customer (){}
 }

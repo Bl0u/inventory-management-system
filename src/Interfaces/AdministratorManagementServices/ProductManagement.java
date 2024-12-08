@@ -16,6 +16,6 @@ public interface ProductManagement {
     public void updateProductCostPrice(int productId, int newCostPrice);
     public void updateProductReStockThreshold(int productId, int newThreshold);
     public void updateProduct(int productID, Product product) ;
-
+    public void handleProductManagement(int productChoice);
 
 }
