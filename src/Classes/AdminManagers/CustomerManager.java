@@ -30,7 +30,7 @@ public class CustomerManager implements UserManagement {
     }
 
     @Override
-    public void handleAdministratorManagement(int userChoice) {
+    public void handleCustomerManagement(int userChoice) {
         // Handle the user’s choice in the admin interface
         Scanner scanner = new Scanner(System.in);
 

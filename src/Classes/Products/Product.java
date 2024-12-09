@@ -1,10 +1,9 @@
 package Classes.Products;
 import java.util.Scanner;
-import Classes.*;
+
 import Classes.Users.Supplier;
 import Classes.Users.User;
 import Classes.enums.UserType;
-import Interfaces.*;
 import Interfaces.AdministratorManagementServices.ProductManagement;
 
 import java.time.LocalDate;
@@ -37,13 +36,18 @@ public class Product {
     //public Product(String name, String category, String unite, int cost, User user){
 
     //}
-    public Product(String name, String category, int cost, User user){
-        setSupplier(user);
+    public Product(){
+
     }
 
-    public Product(User user){
-        //scanProduct(user);
+    public Product(String name, String category, int cost){
+
     }
+    public Product(String name, String category, int Unite, int cost){
+
+    }
+
+
 // End of Cosntructors
 
 
@@ -74,7 +78,8 @@ public class Product {
         return id;
     }
     public String getSupplier() {
-        return supplier.getName();
+        if (supplier.getName() != null) return supplier.getName();
+        else return null;
     }
     public String getName() {
         return name;
@@ -99,12 +104,45 @@ public class Product {
         return this.Unite;
     }
 
-    public void printProductDetails() {
-        System.out.println("Product Name: " + this.name);
-        System.out.println("Category: " + this.category);
-        System.out.println("Cost Price: " + this.costPrice);
-        System.out.println("Sell Price: " + this.sellPrice);
-        System.out.println("Supplier: " + this.supplier.getClass().getSimpleName());
+    public int getCostPrice() {
+        return costPrice;
+    }
+
+    public void printProductDetails(Product product) {
+        System.out.println("Product Name: " + product.getName());
+        System.out.println("Category: " + product.getCategory());
+        System.out.println("Cost Price: " + product.getCostPrice());
+        System.out.println("Sell Price: " + product.getSellPrice());
+        //System.out.println("Supplier: " +
+                //(product.getSupplier() != null ? this.supplier.getClass().getSimpleName() : "null"));
+    }
+    public void scanProduct() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter product name:");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter product category:");
+        String category = scanner.nextLine();
+
+        if (category.substring(0,5).toLowerCase().equals("fruit") ||
+                category.substring(0,5).toLowerCase().equals("drink") ||
+                category.substring(0,5).toLowerCase().equals("vegat")){
+            System.out.println("Enter product Unite:");
+            String unite = scanner.nextLine();
+            setUnite(unite);
+        }
+
+        System.out.println("Enter product cost price:");
+        int cost = scanner.nextInt();
+        scanner.nextLine();  // Consume the leftover newline character
+
+        // Create the Product object using the constructor
+        setCategory(category);
+        setName(name);
+        setCostPrice(cost);
+        //product.setSellPrice(cost, user);
+
     }
 
     // end of Setters and Getters

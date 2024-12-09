@@ -22,6 +22,7 @@ public class AdministratorInterfaceManager extends Interface
         System.out.println("  * Print all orders with a value higher than a specified amount");
         System.out.println("  * Print all orders with a specific status");
         System.out.println("  * Print details of a specific order");
+        System.out.println("  * Return");
 
     }
 
@@ -35,6 +36,7 @@ public class AdministratorInterfaceManager extends Interface
         System.out.println("  * Update product cost price");
         System.out.println("  * Update product restock threshold");
         System.out.println("  * Update complete product details");
+        System.out.println("  * Return");
 
     }
 
@@ -46,6 +48,7 @@ public class AdministratorInterfaceManager extends Interface
         System.out.println("  * Report on a specific supplier");
         System.out.println("  * Generate sales report");
         System.out.println("  * Generate report for low-stock items");
+        System.out.println("  * Return");
 
     }
 
@@ -59,6 +62,7 @@ public class AdministratorInterfaceManager extends Interface
         System.out.println("  * Search for a product by ID");
         System.out.println("  * Search for a product by name");
         System.out.println("  * Read product details");
+        System.out.println("  * Return");
 
     }
 
@@ -67,6 +71,7 @@ public class AdministratorInterfaceManager extends Interface
         System.out.println("5- Manage Suppliers:");
         System.out.println("  * Report on supplier performance");
         System.out.println("  * Report on suppliers related to a specific product");
+        System.out.println("  * Return");
 
     }
 
@@ -76,6 +81,7 @@ public class AdministratorInterfaceManager extends Interface
         System.out.println("  * Add a new customer");
         System.out.println("  * Update customer details");
         System.out.println("  * Delete a customer");
+        System.out.println("  * Return");
 
     }
 
@@ -85,7 +91,7 @@ public class AdministratorInterfaceManager extends Interface
 
     }
 
-    public void printUserFunctions(){
+    public void printAllAdminFunctions(){
         System.out.println("1- Manage Orders:");
         System.out.println("2- Manage Products:");
         System.out.println("3- Generate Reports:");

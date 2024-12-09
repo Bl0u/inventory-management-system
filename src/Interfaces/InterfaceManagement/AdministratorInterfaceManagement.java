@@ -10,6 +10,7 @@ public interface AdministratorInterfaceManagement {
     void printManageSuppliersFunctions();
     void printManageUsersFunctions();
     void printGeneratlFunctions();
+    void printAllAdminFunctions();
 
     // Method to handle order management actions
     //void handleOrderManagement(int orderChoice);
