@@ -8,5 +8,5 @@ public interface UserManagement {
     public boolean addCustomer (User user)     ;
     public boolean updateCustomer (User user)  ;
     public boolean deleteCustomer (User user)  ;
-    public void handleAdministratorManagement(int userChoice);
+    public void handleCustomerManagement(int userChoice);
 }

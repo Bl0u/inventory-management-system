@@ -8,7 +8,7 @@ public class Electronics extends Product {
     private int powerConsumption ;
 
     public Electronics(String name, String category, int quantity, int cost, User user) {
-        super(name, category, cost, user);
+        super(name, category, cost);
     }
 
     public void setPowerConsumption(int powerConsumption) {

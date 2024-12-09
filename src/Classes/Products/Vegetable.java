@@ -10,7 +10,7 @@ public class Vegetable extends Product{
     private String storageCondition ;
 
     public Vegetable(String name, String category, int quantity, int cost, User user) {
-        super(name, category, cost, user);
+        super(name, category, cost);
     }
 
 

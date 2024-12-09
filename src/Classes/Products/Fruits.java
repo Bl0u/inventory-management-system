@@ -9,7 +9,7 @@ public class Fruits extends Product {
     private String storageCondition ;
 
     public Fruits(String name, String category, int quantity, int cost, User user) {
-        super(name, category, cost, user);
+        super(name, category, cost);
     }
 
     public void setStorageCondition(String storageCondition) {

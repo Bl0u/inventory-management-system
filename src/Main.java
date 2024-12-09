@@ -20,15 +20,8 @@ public class Main {
         //Main DB = new Main();
         //DB.createConnection();
 
-        Scanner scanner = new Scanner(System.in);
-        WorkFlow currentState = WorkFlow.PRINT_INTERFACE;
-        boolean running = true;
-
-        Adminstrator admin = new Adminstrator() ;
-        Customer customer = new Customer();
-        Supplier supplier = new Supplier("peter", "peteremil891@gmail.com") ;
-
-        supplier.supplierStockManager.addProduct(supplier);
+        Supplier supplier = new Supplier();
+        supplier.supplierStockManager.addProductToTheStock();
     }
 
     void createConnection()  {

@@ -74,7 +74,7 @@ public class Adminstrator extends User {
             switch (currentState) {
                 case CHOOSE_CATEGORY:
                     // Display categories for admin
-                    administratorInterfaceManager1.printInterface();
+                    administratorInterfaceManager1.printAllAdminFunctions();
                     System.out.println("Your choice: ");
                     int categoryChoice = scanner.nextInt();
                     currentState = switch (categoryChoice) {
@@ -157,7 +157,7 @@ public class Adminstrator extends User {
                     if (userChoice == 4) {
                         currentState = AdministratorInterfaceState.CHOOSE_CATEGORY;
                     } else {
-                        //handleAdministratorManagement(userChoice);
+                        customerManager.handleCustomerManagement(userChoice);
                         currentState = AdministratorInterfaceState.MANAGE_USERS;
                     }
                     break;
