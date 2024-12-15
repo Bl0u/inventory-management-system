@@ -1,15 +1,10 @@
 package Classes.Users;
 import Classes.enums.UserType;
-import Administrator.AdministratorManagementServices.ProductManagement;
-import User.user;
+import UserClass.User;
 
-public class Customer extends user {
+public class Customer extends User {
     UserType userType = UserType.CUSTOMER ;
 
-    @Override
-    public ProductManagement getProductManagementInterface() {
-        return null;
-    }
 
     @Override
     public UserType getUserType() {
@@ -19,4 +14,10 @@ public class Customer extends user {
     public Customer(String name, String email){}
     public Customer(int id, String name, String email){}
     public Customer (){}
+
+    @Override
+    public void storeDB(User user) {
+        System.out.println("Store customer information");
+
+    }
 }

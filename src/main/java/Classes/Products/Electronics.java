@@ -1,10 +1,10 @@
 package Classes.Products;
-import User.user;
+import UserClass.User;
 
 public class Electronics extends Product {
     private int powerConsumption ;
 
-    public Electronics(String name, String category, int quantity, int cost, user user) {
+    public Electronics(String name, String category, int quantity, int cost, User user) {
         super(name, category, cost);
     }
 

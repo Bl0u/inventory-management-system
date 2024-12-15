@@ -22,7 +22,7 @@ public interface CartManagement {
    - hasProduct(Classes.Product product): Checks if a specific product is in the cart.
      */
 
-    // update should list all the items in the program interface and then the user choose which item to manuplaute
+    // update should list all the items in the program interface and then the User choose which item to manuplaute
     // after choosing an item, he gets another interface with the manipulateable items ... etc
     // update function has the "cartHasProduct" function for validation
 }

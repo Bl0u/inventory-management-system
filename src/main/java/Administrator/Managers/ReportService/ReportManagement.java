@@ -1,4 +1,4 @@
-package Administrator.AdministratorManagementServices;
+package Administrator.Managers.ReportService;
 
 import Classes.Users.Customer;
 import Classes.Products.Product;

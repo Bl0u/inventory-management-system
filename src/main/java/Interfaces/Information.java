@@ -1,9 +1,9 @@
 package Interfaces;
 
-import User.user;
+import UserClass.User;
 
 public interface Information {
-    public boolean myInfo(user user) ;
-    public boolean myHistory(user user) ;
-    public boolean myPerformance(user user) ;
+    public boolean myInfo(User user) ;
+    public boolean myHistory(User user) ;
+    public boolean myPerformance(User user) ;
 }

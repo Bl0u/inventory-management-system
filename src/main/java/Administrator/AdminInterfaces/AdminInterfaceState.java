@@ -1,4 +1,4 @@
-package Administrator;
+package Administrator.AdminInterfaces;
 
 public enum AdminInterfaceState {
         CHOOSE_CATEGORY,        // Initial screen for choosing a category

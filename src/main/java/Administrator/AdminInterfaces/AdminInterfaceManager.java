@@ -1,9 +1,30 @@
 package Administrator.AdminInterfaces;
+import Administrator.Managers.OrderService.OrderReportManager;
+import Administrator.Managers.ProductService.ProductManager;
+import Administrator.Managers.ReportService.ReportManager;
+import Administrator.Managers.StockService.StockManager;
+import Administrator.Managers.SupplierService.SupplierManager;
 import Classes.InterfaceManagers.Interface;
-import Administrator.AdministratorInterfaceManagement;
+import java.util.Scanner;
 
 public class AdminInterfaceManager extends Interface
         implements AdministratorInterfaceManagement {
+
+    private ProductManager productManager;
+    private SupplierManager supplierManager;
+    private ReportManager reportManager;
+    private OrderReportManager orderReportManager;
+    private ReportManager reportManager2;
+    private StockManager stockManager;
+
+    public AdminInterfaceManager(){
+        stockManager = new StockManager();
+        reportManager2 = new ReportManager();
+        orderReportManager = new OrderReportManager();
+        reportManager = new ReportManager();
+        supplierManager = new SupplierManager();
+        productManager = new ProductManager();
+    }
 
     @Override
     public void printManageOrderFunctions() {
@@ -92,6 +113,117 @@ public class AdminInterfaceManager extends Interface
         System.out.println("6- Manage Users:");
         System.out.println("7- Exit");
 
+    }
+
+    @Override
+    public void printInterface() {
+
+        Scanner scanner = new Scanner(System.in);
+        AdminInterfaceState currentState = AdminInterfaceState.CHOOSE_CATEGORY; // Start with the category selection screen
+        boolean running = true;
+
+        while (running) {
+            switch (currentState) {
+                case AdminInterfaceState.CHOOSE_CATEGORY:
+                    // Display categories for Admin
+                    this.printAllAdminFunctions();
+                    System.out.println("Your choice: ");
+                    int categoryChoice = scanner.nextInt();
+                    currentState = switch (categoryChoice) {
+                        case 1 -> AdminInterfaceState.MANAGE_ORDERS;
+                        case 2 -> AdminInterfaceState.MANAGE_PRODUCTS;
+                        case 3 -> AdminInterfaceState.GENERATE_REPORTS;
+                        case 4 -> AdminInterfaceState.MANAGE_STOCK;
+                        case 5 -> AdminInterfaceState.MANAGE_SUPPLIERS;
+                        case 6 -> AdminInterfaceState.MANAGE_USERS;
+                        case 7 -> AdminInterfaceState.EXIT;
+                        default -> AdminInterfaceState.CHOOSE_CATEGORY;
+                    };
+                    break;
+
+                case AdminInterfaceState.MANAGE_ORDERS:
+                    // Handle order management functions
+                    this.printManageOrderFunctions();
+
+                    int orderChoice = scanner.nextInt();
+                    if (orderChoice == 7) {
+                        currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    } else {
+                        orderReportManager.handleOrderManagement(orderChoice);
+                        currentState = AdminInterfaceState.MANAGE_ORDERS;
+                    }
+                    break;
+
+                case AdminInterfaceState.MANAGE_PRODUCTS:
+                    // Handle product management functions
+                    this.printManageProductsFunctions();
+                    int productChoice = scanner.nextInt();
+                    if (productChoice == 8) {
+                        currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    } else {
+                        productManager.handleProductManagement(productChoice);
+                        currentState = AdminInterfaceState.MANAGE_PRODUCTS;
+                    }
+                    break;
+
+                case AdminInterfaceState.GENERATE_REPORTS:
+                    // Handle report generation functions
+                    this.printGenerateReportsFunctions();
+                    int reportChoice = scanner.nextInt();
+                    if (reportChoice == 6) {
+                        currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    } else {
+                        reportManager.handleReportGeneration(reportChoice);
+                        currentState = AdminInterfaceState.GENERATE_REPORTS;
+                    }
+                    break;
+
+                case AdminInterfaceState.MANAGE_STOCK:
+                    // Handle stock management functions
+                    this.printManageStockFunctions();
+                    int stockChoice = scanner.nextInt();
+                    if (stockChoice == 8) {
+                        currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    } else {
+                        stockManager.handleStockManagement(stockChoice);
+                        currentState = AdminInterfaceState.MANAGE_STOCK;
+                    }
+                    break;
+
+                case AdminInterfaceState.MANAGE_SUPPLIERS:
+                    // Handle supplier management functions
+                    this.printManageSuppliersFunctions();
+                    int supplierChoice = scanner.nextInt();
+                    if (supplierChoice == 3) {
+                        currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    } else {
+                        supplierManager.handleSupplierManagement(supplierChoice);
+                        currentState = AdminInterfaceState.MANAGE_SUPPLIERS;
+                    }
+                    break;
+
+                case AdminInterfaceState.MANAGE_USERS:
+                    // Handle User management functions
+                    this.printManageUsersFunctions();
+                    int userChoice = scanner.nextInt();
+                    if (userChoice == 4) {
+                        currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    } else {
+                        currentState = AdminInterfaceState.MANAGE_USERS;
+                    }
+                    break;
+
+                case AdminInterfaceState.EXIT:
+                    System.out.println("Exiting...");
+                    running = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid selection, returning to main menu.");
+                    currentState = AdminInterfaceState.CHOOSE_CATEGORY;
+                    break;
+            }
+        }
     }
 
 

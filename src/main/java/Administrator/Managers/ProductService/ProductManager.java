@@ -1,7 +1,6 @@
-package Administrator.AdminManagers;
+package Administrator.Managers.ProductService;
 
 import Classes.Products.Product;
-import Administrator.AdministratorManagementServices.ProductManagement;
 
 public class ProductManager  implements ProductManagement {
 

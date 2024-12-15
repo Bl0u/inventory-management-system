@@ -1,7 +1,6 @@
-package Administrator.AdminManagers;
+package Administrator.Managers.StockService;
 
 import Classes.Products.Product;
-import Administrator.AdministratorManagementServices.StockManagement;
 
 import java.util.Scanner;
 
@@ -16,14 +15,14 @@ public class StockManager implements StockManagement {
     public void addProductToTheStock() {
         // Logic to add a product to the stock
         System.out.println("Adding product...");
-        // Example: Prompt user for product details and add the product to the database
+        // Example: Prompt User for product details and add the product to the database
     }
 
     @Override
     public void deleteProductFromTheStock() {
         // Logic to delete a product from the stock
         System.out.println("Deleting product...");
-        // Example: Prompt user for product ID and remove the product
+        // Example: Prompt User for product ID and remove the product
     }
 
     @Override
@@ -83,7 +82,7 @@ public class StockManager implements StockManagement {
             case 4:
                 // Restock a product
                 System.out.println("Enter product details for restocking:");
-                // Assume we prompt the user for product info
+                // Assume we prompt the User for product info
                 reStockProduct();  // Replace with actual product details
                 break;
             case 5:

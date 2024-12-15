@@ -1,6 +1,9 @@
 package main;
 
 import Administrator.Admin;
+import Classes.Users.Customer;
+import Supplier.Supplier;
+import UserDAO.UserDAOManager;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,6 +31,12 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("hello");
+        UserDAOManager userDAOManager = new UserDAOManager();
         Admin admin = new Admin();
-   }
+        Supplier supplier = new Supplier();
+        Customer customer = new Customer();
+        userDAOManager.storeUser(admin);
+        userDAOManager.storeUser(supplier);
+        userDAOManager.storeUser(customer);
+    }
 }

@@ -1,8 +1,7 @@
-package Administrator.AdminManagers;
+package Administrator.Managers.OrderService;
 
 import Classes.Users.Customer;
 import Classes.Products.Product;
-import Administrator.AdministratorManagementServices.OrderManagement;
 
 public class OrderReportManager implements OrderManagement {
 

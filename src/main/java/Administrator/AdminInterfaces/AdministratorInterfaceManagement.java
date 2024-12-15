@@ -1,8 +1,11 @@
-package Administrator;
+package Administrator.AdminInterfaces;
+
+import java.util.Scanner;
 
 public interface AdministratorInterfaceManagement {
 
     // print function interfaces
+    public void  printInterface();
     void printManageOrderFunctions();
     void printManageProductsFunctions();
     void printGenerateReportsFunctions();
@@ -26,6 +29,6 @@ public interface AdministratorInterfaceManagement {
     // Method to handle supplier management actions
     //void handleSupplierManagement(int supplierChoice);
 
-    // Method to handle user management actions
+    // Method to handle User management actions
     //void handleAdministratorManagement(int userChoice);
 }
