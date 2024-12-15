@@ -1,6 +1,6 @@
 package Classes.SupplierManagers;
 import Classes.Products.Product;
-import Administrator.AdministratorManagementServices.StockManagement;
+import Administrator.Managers.StockService.StockManagement;
 
 import java.util.Scanner;
 

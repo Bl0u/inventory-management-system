@@ -1,7 +1,6 @@
-package Administrator.AdminManagers;
+package Administrator.Managers.SupplierService;
 
 import Supplier.Supplier;
-import Administrator.AdministratorManagementServices.SupplierManagement;
 
 import java.util.ArrayList;
 import java.util.List;

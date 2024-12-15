@@ -1,6 +1,6 @@
 package Classes.SupplierManagers;
 import Classes.Products.Product;
-import Administrator.AdministratorManagementServices.ProductManagement;
+import Administrator.Managers.ProductService.ProductManagement;
 
 public class SupplierProductManager implements ProductManagement {
     @Override

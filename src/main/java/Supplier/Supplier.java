@@ -4,10 +4,9 @@ import Classes.SupplierManagers.*;
 
 
 import Classes.enums.UserType;
-import Administrator.AdministratorManagementServices.ProductManagement;
-import User.user;
+import UserClass.User;
 
-public class Supplier extends user {
+public class Supplier extends User {
     UserType userType = UserType.SUPPLIER ;
     String name;
 
@@ -30,9 +29,10 @@ public class Supplier extends user {
     }
 
     @Override
-    public ProductManagement getProductManagementInterface() {
-        return supplierProductManager;
+    public void storeDB(User user) {
+        System.out.println("Store supplier");
     }
+
 
     @Override
     public UserType getUserType() {

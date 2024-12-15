@@ -1,7 +1,6 @@
-package Administrator.AdminManagers;
+package Administrator.Managers.ReportService;
 import Classes.Users.* ;
 import Classes.Products.Product;
-import Administrator.AdministratorManagementServices.ReportManagement;
 import Supplier.Supplier;
 
 public class ReportManager implements ReportManagement {

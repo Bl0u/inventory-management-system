@@ -2,9 +2,8 @@ package Classes.Products;
 import java.util.Scanner;
 
 import Supplier.Supplier;
-import User.user;
+import UserClass.User;
 import Classes.enums.UserType;
-import Administrator.AdministratorManagementServices.ProductManagement;
 
 import java.time.LocalDate;
 
@@ -33,7 +32,7 @@ public class Product {
 
 
 // Constructors
-    //public Product(String name, String category, String unite, int cost, user user){
+    //public Product(String name, String category, String unite, int cost, User User){
 
     //}
     public Product(){
@@ -52,7 +51,7 @@ public class Product {
 
 
     // Setters and Getters
-    public void setSupplier(user user) {
+    public void setSupplier(User user) {
         if (user.getUserType() == UserType.SUPPLIER)
             this.supplier = (Supplier) user;
     }
@@ -65,10 +64,7 @@ public class Product {
     public void setCostPrice(int costPrice) {
         this.costPrice = costPrice;
     }
-    public void setSellPrice(int cost, user user) {
-        ProductManagement productManagement = user.getProductManagementInterface();
-        this.sellPrice = productManagement.setPrice(cost, this);
-    }
+
     public void setUnite(String unite) {
         Unite = unite;
     }
@@ -141,7 +137,7 @@ public class Product {
         setCategory(category);
         setName(name);
         setCostPrice(cost);
-        //product.setSellPrice(cost, user);
+        //product.setSellPrice(cost, User);
 
     }
 

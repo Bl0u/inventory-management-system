@@ -3,8 +3,7 @@ package Supplier;
 import Classes.InterfaceManagers.Interface;
 
 public class SupplierInterfaceManager extends Interface implements SupplierInterfaceManagement {
-    @Override
-    public void printInterface() {}
+
 
     @Override
     public void printUserFunctions() {

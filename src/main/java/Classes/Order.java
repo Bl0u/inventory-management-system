@@ -1,13 +1,13 @@
 package Classes;
 
-import User.user;
+import UserClass.User;
 
 import java.time.LocalDateTime;
 
 public class Order {
     private String orderId; // decided on the DB itself
-    private user seller; // Can be a Supplier or Administrator
-    private user buyer;  // Can be a Customer or Administrator
+    private User seller; // Can be a Supplier or Administrator
+    private User buyer;  // Can be a Customer or Administrator
     private Cart cart;   // Contains the list of products
     private String shippingInfo;
     private String paymentType; // e.g., Visa, PayPal

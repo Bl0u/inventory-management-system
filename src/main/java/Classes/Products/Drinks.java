@@ -1,11 +1,11 @@
 package Classes.Products;
-import User.user;
+import UserClass.User;
 
 public class Drinks extends Product {
     private boolean isAlcoholic ;
     private String storageCondition ;
 
-    public Drinks(String name, String category, int quantity, int cost, user user) {
+    public Drinks(String name, String category, int quantity, int cost, User user) {
         super(name, category, cost);
     }
 

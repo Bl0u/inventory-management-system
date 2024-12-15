@@ -1,8 +1,7 @@
-package User;
+package UserClass;
 import Classes.enums.UserType;
-import Administrator.AdministratorManagementServices.ProductManagement;
 
-public abstract class user {
+public abstract class User {
 
     // Attributes
     private UserType userType = UserType.NONE;
@@ -11,24 +10,23 @@ public abstract class user {
     //End of Attributes --------------------------
 
     // Constructors
-    public user(String name, String email, UserType userType){
+    public User(String name, String email, UserType userType){
         setName(name);
         setEmail(email);
         setUserType(userType);
     }
 
-    public user() {
+    public User() {
 
     }
     // End of Constructors --------------------
 
     // Setters && Getters
 
-
+    public abstract void storeDB(User user);
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
-    public abstract ProductManagement getProductManagementInterface();
     public abstract  UserType getUserType() ;
 
     public void setName(String Name){

@@ -1,5 +1,5 @@
 
-package Administrator.AdministratorManagementServices;
+package Administrator.Managers.StockService;
 
 import Classes.Products.Product;
 

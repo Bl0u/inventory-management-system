@@ -1,4 +1,4 @@
-package Administrator.AdministratorManagementServices;
+package Administrator.Managers.ProductService;
 
 import Classes.Products.Product;
 

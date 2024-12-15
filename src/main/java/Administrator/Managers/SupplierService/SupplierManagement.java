@@ -1,4 +1,4 @@
-package Administrator.AdministratorManagementServices;
+package Administrator.Managers.SupplierService;
 
 import Supplier.Supplier;
 
