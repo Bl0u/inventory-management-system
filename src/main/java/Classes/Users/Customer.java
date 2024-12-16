@@ -15,9 +15,25 @@ public class Customer extends User {
     public Customer(int id, String name, String email){}
     public Customer (){}
 
-    @Override
-    public void storeDB(User user) {
-        System.out.println("Store customer information");
+    public void storeDB() {
+        System.out.println(" Customer storeDB");
+    }
 
+    @Override
+    public void deleteDB(User user) {
+
+        System.out.println(" Customer deleteDP");
+    }
+
+    @Override
+    public void updateDB(User user) {
+
+        System.out.println(" Customer updateDB");
+    }
+
+    @Override
+    public void readDB(User user) {
+
+        System.out.println(" Customer readDB");
     }
 }

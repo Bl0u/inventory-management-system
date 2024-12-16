@@ -23,7 +23,10 @@ public abstract class User {
 
     // Setters && Getters
 
-    public abstract void storeDB(User user);
+    public abstract void storeDB();
+    public abstract void deleteDB(User user);
+    public abstract void updateDB(User user);
+    public abstract void readDB(User user);
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
