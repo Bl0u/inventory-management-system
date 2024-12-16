@@ -5,6 +5,7 @@ import Classes.Users.Customer;
 import Supplier.Supplier;
 import UserDAO.UserDAOManager;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -33,10 +34,6 @@ public class Main {
         System.out.println("hello");
         UserDAOManager userDAOManager = new UserDAOManager();
         Admin admin = new Admin();
-        Supplier supplier = new Supplier();
-        Customer customer = new Customer();
-        userDAOManager.storeUser(admin);
-        userDAOManager.storeUser(supplier);
-        userDAOManager.storeUser(customer);
+        System.out.println(admin);
     }
 }

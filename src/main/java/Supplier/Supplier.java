@@ -28,11 +28,27 @@ public class Supplier extends User {
 
     }
 
-    @Override
-    public void storeDB(User user) {
-        System.out.println("Store supplier");
+    public void storeDB() {
+        System.out.println(" Supplier storeDB");
     }
 
+    @Override
+    public void deleteDB(User user) {
+
+        System.out.println(" Supplier deleteDP");
+    }
+
+    @Override
+    public void updateDB(User user) {
+
+        System.out.println(" Supplier updateDB");
+    }
+
+    @Override
+    public void readDB(User user) {
+
+        System.out.println(" Supplier readDB");
+    }
 
     @Override
     public UserType getUserType() {
